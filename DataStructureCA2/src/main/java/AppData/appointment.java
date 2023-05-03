@@ -9,5 +9,5 @@ package AppData;
  * @author carol
  */
 public class appointment {
-    private String fName;
+    private String fame;
 }
