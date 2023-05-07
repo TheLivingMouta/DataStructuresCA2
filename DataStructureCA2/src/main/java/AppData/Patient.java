@@ -20,11 +20,11 @@ public class Patient {
     private LocalDate dateJoined;
 
     //default patient constructor
-    public patient() {
+    public Patient() {
     }
     
     //Paramateriazed? patient constructor 
-    public patient(String firstName, String secName, LocalDate DoB, LocalDate dateJoined) {
+    public Patient(String firstName, String secName, LocalDate DoB, LocalDate dateJoined) {
         this.firstName = firstName;
         this.secName = secName;
         this.DoB = DoB;
@@ -88,7 +88,7 @@ public class Patient {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final patient other = (patient) obj;
+        final Patient other = (Patient) obj;
         if (!Objects.equals(this.firstName, other.firstName)) {
             return false;
         }
