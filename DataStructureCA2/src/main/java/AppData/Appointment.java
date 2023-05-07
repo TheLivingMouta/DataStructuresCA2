@@ -9,7 +9,7 @@ import java.time.LocalDate;
 /**
  * This class represents an Appointment object, which contains information about a patient's appointment with a doctor.
  */
-public class appointment
+public class Appointment
 {
 
     // Private fields for storing the appointment details
@@ -22,7 +22,7 @@ public class appointment
     private String doctorFullName; // The full name of the doctor who will be seeing the patient
 
 // Constructor for creating an Appointment object
-    public appointment(String firstName, String lastName, LocalDate dateOfBirth, String issue, LocalDate date,
+    public Appointment(String firstName, String lastName, LocalDate dateOfBirth, String issue, LocalDate date,
             int triageLevel, String doctorFullName) {
         this.firstName = firstName;
         this.lastName = lastName;
