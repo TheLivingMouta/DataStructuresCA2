@@ -9,5 +9,30 @@ package DataStructures;
  * @author carol
  */
 public class HashMap {
+    private static final int DEFAULT_CAPACITY = 103;
+    private Entry [] data;
+    private int size;
     
+    
+    private static class Entry{
+        private final String key;
+        private String value;
+        
+        public Entry(String key, String value){
+            this.key = key;
+            this.value = value;
+        }
+        
+        public String getKey(){
+            return key;
+        }
+        public String getValue(){
+            return value;
+        }
+        public String updateValue(String newValue){
+            String oldValue = value;
+            this.value = newValue;
+            return oldValue;
+        }
+    }
 }
