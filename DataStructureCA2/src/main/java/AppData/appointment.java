@@ -89,4 +89,57 @@ public class appointment
     public void setDoctorFullName(String doctorFullName) {
         this.doctorFullName = doctorFullName;
     }
+
+// Equals method for comparing Appointment objects
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) { // If both objects refer to the same object in memory, they are equal
+            return true;
+        }
+        if (!(o instanceof Appointment)) { // If the object being compared is not an Appointment object, they are not equal
+            return false;
+        }
+        Appointment that = (Appointment) o; // Cast the object to an Appointment object and compare the fields
+        return firstName.equals(that.firstName)
+                && lastName.equals(that.lastName)
+                && dateOfBirth.equals(that.dateOfBirth)
+                && issue.equals(that.issue)
+                && date.equals(that.date);
+    }
+
+    // HashCode method for creating a unique integer representation of the Appointment object
+    @Override
+    public int hashCode() {
+        int result = firstName.hashCode();
+        result = 31 * result + lastName.hashCode();
+        result = 31 * result + dateOfBirth.hashCode();
+        result = 31 * result + issue.hashCode();
+        result = 31 * result + date.hashCode();
+        return result;
+    }
+
+    // CompareTo method for natural ordering of Appointment objects based on triage level
+    public int compareTo(Appointment other) {
+        if (this.triageLevel == other.triageLevel) {
+            return 0;
+        } else if (this.triageLevel < other.triageLevel) {
+            return -1;
+        } else {
+            return 1;
+        }
+    }
+
+    // toString method
+    @Override
+    public String toString() {
+        return "Appointment{"
+                + "firstName='" + firstName + '\''
+                + ", lastName='" + lastName + '\''
+                + ", dateOfBirth=" + dateOfBirth
+                + ", issue='" + issue + '\''
+                + ", date=" + date
+                + ", triageLevel=" + triageLevel
+                + ", doctorFullName='" + doctorFullName + '\''
+                + '}';
+    }
 }
