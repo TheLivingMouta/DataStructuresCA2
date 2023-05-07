@@ -4,10 +4,15 @@
  */
 package AppData;
 
+import java.time.LocalDate;
+
 /**
  *
  * @author carol
  */
 public class patient {
-    
+    private String firstName;
+    private String secName;
+    private LocalDate DoB;
+    private LocalDate dateJoined;
 }
