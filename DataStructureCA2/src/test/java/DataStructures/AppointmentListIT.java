@@ -56,22 +56,26 @@ public class AppointmentListIT
      * Test of get method, of class AppointmentList.
      */
     @Test
-    public void testGet() {
-        System.out.println("get");
+    public void testGet()
+    System.out.println("get");
         int index = 0;
-        AppointmentList instance = new AppointmentList();
-        Appointment expResult = null;
-        Appointment result = instance.get(index);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    AppointmentList instance = new AppointmentList();
+    Appointment expResult = null;
+    Appointment result = instance.get(index);
+
+    assertEquals(expResult, result);
+    // TODO review the generated test code and remove the default call to fail.
+
+    fail(
+
+"The test case is a prototype.");
     }
 
     /**
      * Test of indexOf method, of class AppointmentList.
      */
     @Test
-    public void testIndexOf() {
+public void testIndexOf() {
         System.out.println("indexOf");
         Appointment appointment = null;
         AppointmentList instance = new AppointmentList();
@@ -86,7 +90,7 @@ public class AppointmentListIT
      * Test of add method, of class AppointmentList.
      */
     @Test
-    public void testAdd() {
+public void testAdd() {
         System.out.println("add");
         Appointment appointment = null;
         AppointmentList instance = new AppointmentList();
@@ -101,7 +105,7 @@ public class AppointmentListIT
      * Test of set method, of class AppointmentList.
      */
     @Test
-    public void testSet() {
+public void testSet() {
         System.out.println("set");
         int index = 0;
         Appointment appointment = null;
@@ -117,7 +121,7 @@ public class AppointmentListIT
      * Test of remove method, of class AppointmentList.
      */
     @Test
-    public void testRemove() {
+public void testRemove() {
         System.out.println("remove");
         Appointment appointment = null;
         AppointmentList instance = new AppointmentList();
@@ -132,7 +136,7 @@ public class AppointmentListIT
      * Test of isEmpty method, of class AppointmentList.
      */
     @Test
-    public void testIsEmpty() {
+public void testIsEmpty() {
         System.out.println("isEmpty");
         AppointmentList instance = new AppointmentList();
         boolean expResult = false;
