@@ -24,6 +24,17 @@ public class HashMap {
         data = new Entry[capacity];
     }
     
+    public int size(){
+        return size;
+    }
+    
+    private int hash(String key){
+        int hash = key.hashCode();
+        hash = Math.abs(hash);
+        hash = hash % data.length;
+        return hash;
+    }
+    
     private static class Entry{
         private final String key;
         private String value;
