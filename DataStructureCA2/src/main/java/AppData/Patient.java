@@ -4,6 +4,7 @@
  */
 package AppData;
 
+import DataStructures.LinkedList;
 import java.time.LocalDate;
 import java.util.Objects;
 
@@ -18,6 +19,7 @@ public class Patient {
     private String secName;
     private LocalDate DoB;
     private LocalDate dateJoined;
+    private LinkedList appointments;
 
     //default patient constructor
     public Patient() {
@@ -64,6 +66,14 @@ public class Patient {
     public void setDateJoined(LocalDate dateJoined) {
         this.dateJoined = dateJoined;
     }
+
+    public LinkedList getAppointments() {
+        return appointments;
+    }
+
+    public void setAppointments(LinkedList appointments) {
+        this.appointments = appointments;
+    }
     
     //Hashcode method for hashing all the patient variables
     @Override
@@ -76,7 +86,8 @@ public class Patient {
         return hash;
     }
 
-    //equals method to check the between patients 
+    //equals method to check between patients 
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -95,10 +106,7 @@ public class Patient {
         if (!Objects.equals(this.secName, other.secName)) {
             return false;
         }
-        if (!Objects.equals(this.DoB, other.DoB)) {
-            return false;
-        }
-        return Objects.equals(this.dateJoined, other.dateJoined);
+        return Objects.equals(this.DoB, other.DoB);
     }
     
     
