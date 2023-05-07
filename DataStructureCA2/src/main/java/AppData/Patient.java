@@ -13,7 +13,7 @@ import java.util.Objects;
  */
 
 //Private variables for storing patient information
-public class patient {
+public class Patient {
     private String firstName;
     private String secName;
     private LocalDate DoB;
