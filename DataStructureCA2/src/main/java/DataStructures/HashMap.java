@@ -4,6 +4,8 @@
  */
 package DataStructures;
 
+import AppData.Patient;
+
 /**
  *
  * @author carol
@@ -35,7 +37,7 @@ public class HashMap {
         return hash;
     }
     
-    public String put(String key, String value){
+    public Patient put(String key, Patient value){
         if(key == null || value == null){
             throw new IllegalArgumentException("Null fields not permitted");
         }
@@ -54,7 +56,7 @@ public class HashMap {
             return null;
         }else{
             if(data[slot].key.equals(key)){
-                String oldValue = data[slot].updateValue(value);
+                Patient oldValue = data[slot].updateValue(value);
                 return oldValue;
             }else{
                 throw new SlotOccupiedException("Provided key maps to occupied slot in map.");
@@ -80,9 +82,9 @@ public class HashMap {
     
     private static class Entry{
         private final String key;
-        private String value;
+        private Patient value;
         
-        public Entry(String key, String value){
+        public Entry(String key, Patient value){
             this.key = key;
             this.value = value;
         }
@@ -90,11 +92,11 @@ public class HashMap {
         public String getKey(){
             return key;
         }
-        public String getValue(){
+        public Patient getValue(){
             return value;
         }
-        public String updateValue(String newValue){
-            String oldValue = value;
+        public Patient updateValue(Patient newValue){
+            Patient oldValue = value;
             this.value = newValue;
             return oldValue;
         }
