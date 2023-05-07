@@ -29,4 +29,31 @@ public class AppointmentList
         }
     }
 
+    /**
+     * Returns the number of appointments in the list.
+     *
+     * @return the number of appointments in the list
+     */
+    public int size() {
+        return size;
+    }
+
+}
+/**
+ * Returns the appointment at the specified index in the list.
+ *
+ * @param index the index of the appointment to return
+ * @return the appointment at the specified index, or null if the index is invalid
+ * @throws IndexOutOfBoundsException if the index is out of range
+ */
+public Appointment get(int index) {
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException("Invalid position provided");// invalid index, output Invalid position provided
+        }
+        AppointmentList.Node current = head;
+        for (int i = 0; i < index; i++) {
+            current = current.next;
+        }
+        return current.data; // return the appointment at the specified index
+    }
 }
