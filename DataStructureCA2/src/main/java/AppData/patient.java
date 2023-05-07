@@ -11,15 +11,19 @@ import java.util.Objects;
  *
  * @author carol
  */
+
+//Private variables for storing patient information
 public class patient {
     private String firstName;
     private String secName;
     private LocalDate DoB;
     private LocalDate dateJoined;
 
+    //default patient constructor
     public patient() {
     }
-
+    
+    //Paramateriazed? patient constructor 
     public patient(String firstName, String secName, LocalDate DoB, LocalDate dateJoined) {
         this.firstName = firstName;
         this.secName = secName;
@@ -28,7 +32,7 @@ public class patient {
     }
     
     
-
+    //getter and setter methods for the patient information
     public String getFirstName() {
         return firstName;
     }
@@ -60,7 +64,8 @@ public class patient {
     public void setDateJoined(LocalDate dateJoined) {
         this.dateJoined = dateJoined;
     }
-
+    
+    //Hashcode method for hashing all the patient variables
     @Override
     public int hashCode() {
         int hash = 7;
@@ -71,6 +76,7 @@ public class patient {
         return hash;
     }
 
+    //equals method to check the between patients 
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
