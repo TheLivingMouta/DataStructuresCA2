@@ -5,6 +5,7 @@
 package AppData;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 /**
  *
@@ -58,6 +59,40 @@ public class patient {
 
     public void setDateJoined(LocalDate dateJoined) {
         this.dateJoined = dateJoined;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 29 * hash + Objects.hashCode(this.firstName);
+        hash = 29 * hash + Objects.hashCode(this.secName);
+        hash = 29 * hash + Objects.hashCode(this.DoB);
+        hash = 29 * hash + Objects.hashCode(this.dateJoined);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final patient other = (patient) obj;
+        if (!Objects.equals(this.firstName, other.firstName)) {
+            return false;
+        }
+        if (!Objects.equals(this.secName, other.secName)) {
+            return false;
+        }
+        if (!Objects.equals(this.DoB, other.DoB)) {
+            return false;
+        }
+        return Objects.equals(this.dateJoined, other.dateJoined);
     }
     
     
