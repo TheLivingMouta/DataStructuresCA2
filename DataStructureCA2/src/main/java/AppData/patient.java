@@ -15,6 +15,16 @@ public class patient {
     private String secName;
     private LocalDate DoB;
     private LocalDate dateJoined;
+
+    public patient() {
+    }
+
+    public patient(String firstName, String secName, LocalDate DoB, LocalDate dateJoined) {
+        this.firstName = firstName;
+        this.secName = secName;
+        this.DoB = DoB;
+        this.dateJoined = dateJoined;
+    }
     
     
 
