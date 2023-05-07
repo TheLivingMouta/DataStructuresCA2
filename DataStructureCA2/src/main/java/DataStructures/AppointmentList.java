@@ -38,15 +38,14 @@ public class AppointmentList
         return size;
     }
 
-}
-/**
- * Returns the appointment at the specified index in the list.
- *
- * @param index the index of the appointment to return
- * @return the appointment at the specified index, or null if the index is invalid
- * @throws IndexOutOfBoundsException if the index is out of range
- */
-public Appointment get(int index) {
+    /**
+     * Returns the appointment at the specified index in the list.
+     *
+     * @param index the index of the appointment to return
+     * @return the appointment at the specified index, or null if the index is invalid
+     * @throws IndexOutOfBoundsException if the index is out of range
+     */
+    public Appointment get(int index) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("Invalid position provided");// invalid index, output Invalid position provided
         }
@@ -56,4 +55,54 @@ public Appointment get(int index) {
         }
         return current.data; // return the appointment at the specified index
     }
+
+    /**
+     * Returns the index of the specified appointment in the list.
+     *
+     * @param appointment the appointment to search for
+     * @return the index of the appointment in the list, or -1 if the appointment is not found
+     * @throws IllegalArgumentException if the appointment parameter is null
+     *
+     */
+    public int indexOf(Appointment appointment) {
+        if (appointment == null) {
+            throw new IllegalArgumentException("Appointment cannot be null"); //throws IllegalArgumentException if the appoinment field is null
+        }
+        AppointmentList.Node current = head;
+        int index = 0;
+        while (current != null) {
+            if (current.data.equals(appointment)) {
+                return index; // appointment found, return its index
+            }
+            current = current.next;
+            index++;
+        }
+        return -1; // appointment not found, return -1
+    }
+
+    /**
+     *
+     * Adds the given appointment to the end of the list.
+     *
+     * @param appointment the appointment to add to the list
+     * @return true if the appointment was successfully added to the list
+     * @throws IllegalArgumentException if the appointment parameter is null
+     */
+    public boolean add(Appointment appointment) {
+        if (appointment == null) {
+            throw new IllegalArgumentException("Appointment cannot be null"); //throws IllegalArgumentException if the appoinment field is null
+        }
+        AppointmentList.Node newNode = new AppointmentList.Node(appointment); // create a new node with the appointment object
+        if (tail == null) { //list is empty
+            head = newNode; //make this node the first node
+            tail = newNode; //make this node the last node
+        } else { //list is not empty
+            tail.next = newNode;    // add the new node to the tail
+            tail = newNode;  // update the tail reference
+
+        }
+        size++; // increment the size of the list
+        return true;
+    }
+
 }
