@@ -10,7 +10,7 @@ import AppData.Appointment;
  *
  * @author oran
  */
-public class AppointmentList
+public class LinkedList
 {
 
     protected Node head; // the first node in the list
@@ -49,7 +49,7 @@ public class AppointmentList
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("Invalid position provided");// invalid index, output Invalid position provided
         }
-        AppointmentList.Node current = head;
+        LinkedList.Node current = head;
         for (int i = 0; i < index; i++) {
             current = current.next;
         }
@@ -68,7 +68,7 @@ public class AppointmentList
         if (appointment == null) {
             throw new IllegalArgumentException("Appointment cannot be null"); //throws IllegalArgumentException if the appoinment field is null
         }
-        AppointmentList.Node current = head;
+        LinkedList.Node current = head;
         int index = 0;
         while (current != null) {
             if (current.data.equals(appointment)) {
@@ -92,7 +92,7 @@ public class AppointmentList
         if (appointment == null) {
             throw new IllegalArgumentException("Appointment cannot be null"); //throws IllegalArgumentException if the appoinment field is null
         }
-        AppointmentList.Node newNode = new AppointmentList.Node(appointment); // create a new node with the appointment object
+        LinkedList.Node newNode = new LinkedList.Node(appointment); // create a new node with the appointment object
         if (tail == null) { //list is empty
             head = newNode; //make this node the first node
             tail = newNode; //make this node the last node
