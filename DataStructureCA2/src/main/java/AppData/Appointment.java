@@ -8,6 +8,6 @@ package AppData;
  *
  * @author carol
  */
-public class appointment {
+public class Appointment {
     private String fame;
 }
