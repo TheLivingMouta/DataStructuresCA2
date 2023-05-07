@@ -11,7 +11,7 @@ import java.util.NoSuchElementException;
  *
  * @author carol
  */
-public class PriorityQueue extends AppointmentList
+public class PriorityQueue extends LinkedList
 {
 
     @Override

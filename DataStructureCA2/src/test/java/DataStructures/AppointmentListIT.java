@@ -16,10 +16,10 @@ import static org.junit.Assert.*;
  *
  * @author Oran
  */
-public class AppointmentListIT
+public class LinkedListTests
 {
 
-    public AppointmentListIT() {
+    public LinkedListTests() {
     }
 
     @BeforeClass
@@ -44,7 +44,7 @@ public class AppointmentListIT
     @Test
     public void testSize() {
         System.out.println("size");
-        AppointmentList instance = new AppointmentList();
+        LinkedListTests instance = new LinkedListTests();
         int expResult = 0;
         int result = instance.size();
         assertEquals(expResult, result);
@@ -56,19 +56,17 @@ public class AppointmentListIT
      * Test of get method, of class AppointmentList.
      */
     @Test
-    public void testGet()
+    public void testGet(){
     System.out.println("get");
         int index = 0;
-    AppointmentList instance = new AppointmentList();
+    LinkedListTests instance = new LinkedListTests();
     Appointment expResult = null;
     Appointment result = instance.get(index);
 
-    assertEquals(expResult, result);
+    LinkedListTestsls(expResult, result);
     // TODO review the generated test code and remove the default call to fail.
 
-    fail(
-
-"The test case is a prototype.");
+    LinkedListe test case is a prototype.");
     }
 
     /**
@@ -78,7 +76,7 @@ public class AppointmentListIT
 public void testIndexOf() {
         System.out.println("indexOf");
         Appointment appointment = null;
-        AppointmentList instance = new AppointmentList();
+        LinkedList instance = new AppointmentList();
         int expResult = 0;
         int result = instance.indexOf(appointment);
         assertEquals(expResult, result);
