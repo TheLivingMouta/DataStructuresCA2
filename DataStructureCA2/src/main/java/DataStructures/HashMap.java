@@ -13,6 +13,16 @@ public class HashMap {
     private Entry [] data;
     private int size;
     
+    public HashMap(){
+        data = new Entry[DEFAULT_CAPACITY];
+    }
+    
+    public HashMap(int capacity){
+        if(capacity <= 0){
+            throw new IllegalArgumentException("Map capacity can't be less than 1");
+        }
+        data = new Entry[capacity];
+    }
     
     private static class Entry{
         private final String key;
