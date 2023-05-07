@@ -15,4 +15,41 @@ public class patient {
     private String secName;
     private LocalDate DoB;
     private LocalDate dateJoined;
+    
+    
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getSecName() {
+        return secName;
+    }
+
+    public void setSecName(String secName) {
+        this.secName = secName;
+    }
+
+    public LocalDate getDoB() {
+        return DoB;
+    }
+
+    public void setDoB(LocalDate DoB) {
+        this.DoB = DoB;
+    }
+
+    public LocalDate getDateJoined() {
+        return dateJoined;
+    }
+
+    public void setDateJoined(LocalDate dateJoined) {
+        this.dateJoined = dateJoined;
+    }
+    
+    
+    
 }
