@@ -175,6 +175,13 @@ public class HashMap {
         return false;
     }
 
+    /**
+     * this method returns an array of all the keys currently contained in the
+     * map. it creates an empty array and loops through all the keys in the map
+     * and adding all non-null keys to the array
+     *
+     * @return: The newly created array of non-null keys
+     */
     public String[] getKeys() {
         String[] keys = new String[size];
         int i = 0;
@@ -188,6 +195,13 @@ public class HashMap {
         return keys;
     }
 
+    /**
+     * this method returns an array of all the patient values currently
+     * contained within the map. it creates an empty array and iterates through
+     * all the patients in the map and adding all the values to the array
+     *
+     * @return: The newly created array of patient values
+     */
     public Patient[] getValues() {
         Patient[] values = new Patient[size];
         int i = 0;
